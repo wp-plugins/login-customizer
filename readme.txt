@@ -1,6 +1,6 @@
 === Login Customizer ===
 Plugin URI: http://www.hardeepasrani.com/portfolio/wordpress-plugins/login-customizer
-Description: Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! You can preview your changes before you save them! Awesome, right?
+Description: Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! 
 Version: 1.0
 Requires at least: 4.0
 Tested up to: 4.0
