@@ -3,7 +3,7 @@ Plugin URI: http://www.hardeepasrani.com/portfolio/wordpress-plugins/login-custo
 Description: Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! 
 Version: 1.0
 Requires at least: 4.0
-Tested up to: 4.0
+Tested up to: 4.1
 Contributors: hardeepasrani
 Author URI: http://www.hardeepasrani.com
 Tags: login, customizer, logo, login logo, login customizer, login page
