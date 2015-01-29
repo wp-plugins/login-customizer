@@ -4,7 +4,7 @@ Description: Login Customizer plugin allows you to easily customize your login p
 Version: 1.0
 Requires at least: 4.0
 Tested up to: 4.1
-Contributors: hardeepasrani
+Contributors: codeinwp, hardeepasrani
 Author URI: http://www.hardeepasrani.com
 Tags: login, customizer, logo, login logo, login customizer, login page
 License: GPLv2 or later
