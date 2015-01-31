@@ -1,20 +1,26 @@
-=== Login Customizer ===
-Plugin URI: http://www.hardeepasrani.com/portfolio/wordpress-plugins/login-customizer
-Description: Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! 
-Version: 1.0
+	=== Login Customizer ===
+Version: 1.0.1
 Requires at least: 4.0
 Tested up to: 4.1
-Contributors: codeinwp, hardeepasrani
-Author URI: http://www.hardeepasrani.com
-Tags: login, customizer, logo, login logo, login customizer, login page
+Contributors: codeinwp, hardeepasrani,marius_codeinwp
+Author URI: https://themeisle.com
+Tags: login, customizer, logo, login logo, login customizer, login page,admin, branding, customization, custom login, error, login error, custom login pro
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Custom Login Customizer allows you to easily customize your admin login page, straight from your WordPress Customizer!
+
 == Description ==
 
-Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! You can preview your changes before you save them! Awesome, right?
+>Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! You can preview your changes before you save them! Awesome, right?
 
 In your WordPress Dashboard, navigate to Appearance > Login Customizer to get started.
+
+Upcoming features:
+
+- Templates
+- Captcha
+- Advanced authentification
 
 You can customize almost anything and make it look the way you want.
 == Installation ==
@@ -30,7 +36,7 @@ In your WordPress Dashboard, navigate to Appearance > Login Customizer to get st
 
 = How to donate or contribute? =
 
-Please visit <a target="_blank" rel="nofollow" href="http://www.hardeepasrani.com/donate/">this link</a> for more info.
+Please visit <a target="_blank" rel="nofollow" href="https://themeisle.com">this link</a> for more info.
 
 == Screenshots ==
 

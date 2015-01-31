@@ -6,7 +6,7 @@ function logincust_customize_register($wp_customize)
         'priority'       => 30,
         'capability'     => 'edit_theme_options',
         'title'          => __('Login Customizer', 'login-customizer'),
-        'description'    => __('This section allows you to customize the login page of your website.<br/>Login Customizer by <a target="_blank" rel="nofollow" href="http://www.hardeepasrani.com">Hardeep Asrani</a>', 'login-customizer'),
+        'description'    => __('This section allows you to customize the login page of your website.<br/>Login Customizer by <a target="_blank" rel="nofollow" href="https://themeisle.com">ThemeIsle</a>', 'login-customizer'),
     ));
     
     $wp_customize->add_section('logincust_logo_section', array(
