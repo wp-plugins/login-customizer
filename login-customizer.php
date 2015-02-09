@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Custom Login Customizer
+Plugin Name: Custom Login Page Customizer
 Plugin URI: https://themeisle.com/plugins/login-customizer/
 Description: Custom Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! Awesome, right?
 Author: Hardeep Asrani
