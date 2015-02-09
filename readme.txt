@@ -1,4 +1,4 @@
-	=== Custom Login Customizer ===
+	=== Custom Login Page Customizer ===
 Version: 1.0.1
 Requires at least: 4.0
 Tested up to: 4.1
