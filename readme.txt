@@ -12,9 +12,9 @@ Custom Login Customizer allows you to easily customize your admin login page, st
 
 == Description ==
 
->Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! You can preview your changes before you save them! Awesome, right?
+>Custom Login Page Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! You can preview your changes before you save them! Awesome, right?
 
-In your WordPress Dashboard, navigate to Appearance > Login Customizer to get started.
+In your WordPress Dashboard, navigate to Appearance > Custom Login Page Customizer to get started.
 
 Upcoming features:
 
@@ -32,7 +32,7 @@ You can customize almost anything and make it look the way you want.
 
 = How to customizer? =
 
-In your WordPress Dashboard, navigate to Appearance > Login Customizer to get started.
+In your WordPress Dashboard, navigate to Appearance > Custom Login Customizer to get started.
 
 = How to donate or contribute? =
 
@@ -40,5 +40,5 @@ Please visit <a target="_blank" rel="nofollow" href="https://themeisle.com">this
 
 == Screenshots ==
 
-1. Example Login Page
-2. Another Great Example
+1. Example Custom Login Page
+2. Another Great Custom Login Page Example
