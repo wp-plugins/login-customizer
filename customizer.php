@@ -5,59 +5,65 @@ function logincust_customize_register($wp_customize)
     $wp_customize->add_panel( 'logincust_panel', array(
         'priority'       => 30,
         'capability'     => 'edit_theme_options',
-        'title'          => __('Login Customizer', 'login-customizer'),
-        'description'    => __('This section allows you to customize the login page of your website.<br/>Login Customizer by <a target="_blank" rel="nofollow" href="https://themeisle.com">ThemeIsle</a>', 'login-customizer'),
+        'title'          => __('Login Customizer', LOGINCUST_TEXTDOMAIN),
+        'description'    => __('This section allows you to customize the login page of your website.<br/>Login Customizer by <a target="_blank" rel="nofollow" href="https://themeisle.com">ThemeIsle</a>', LOGINCUST_TEXTDOMAIN),
     ));
-    
+
     $wp_customize->add_section('logincust_logo_section', array(
         'priority' => 5,
-        'title' => __('Logo', 'login-customizer'),
+        'title' => __('Logo', LOGINCUST_TEXTDOMAIN),
         'panel'  => 'logincust_panel',
     ));
-    
+
     $wp_customize->add_section('logincust_background_section', array(
         'priority' => 10,
-        'title' => __('Background', 'login-customizer'),
+        'title' => __('Background', LOGINCUST_TEXTDOMAIN),
         'panel'  => 'logincust_panel',
     ));
-    
+
     $wp_customize->add_section('logincust_form_bg_section', array(
         'priority' => 15,
-        'title' => __('Form Background', 'login-customizer'),
+        'title' => __('Form Background', LOGINCUST_TEXTDOMAIN),
         'panel'  => 'logincust_panel',
     ));
-    
+
     $wp_customize->add_section('logincust_form_section', array(
         'priority' => 20,
-        'title' => __('Form Styling', 'login-customizer'),
+        'title' => __('Form Styling', LOGINCUST_TEXTDOMAIN),
         'panel'  => 'logincust_panel',
     ));
-    
+
     $wp_customize->add_section('logincust_field_section', array(
         'priority' => 25,
-        'title' => __('Fields Styling', 'login-customizer'),
+        'title' => __('Fields Styling', LOGINCUST_TEXTDOMAIN),
         'panel'  => 'logincust_panel',
     ));
-    
+
     $wp_customize->add_section('logincust_button_section', array(
         'priority' => 30,
-        'title' => __('Button Styling', 'login-customizer'),
+        'title' => __('Button Styling', LOGINCUST_TEXTDOMAIN),
         'panel'  => 'logincust_panel',
     ));
-    
+
     $wp_customize->add_section('logincust_other_section', array(
         'priority' => 35,
-        'title' => __('Other', 'login-customizer'),
+        'title' => __('Other', LOGINCUST_TEXTDOMAIN),
         'panel'  => 'logincust_panel',
     ));
- 
+
+	$wp_customize->add_section('logincust_security_section', array(
+		'priority' => 40,
+		'title' => __('Security', LOGINCUST_TEXTDOMAIN),
+		'panel'  => 'logincust_panel',
+	));
+
     $wp_customize->add_setting('logincust_logo', array(
         'type' => 'option',
         'capability' => 'edit_theme_options',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logincust_logo', array(
-        'label' => __('Login Logo', 'login-customizer'),
+        'label' => __('Login Logo', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_logo_section',
         'priority' => 5,
         'settings' => 'logincust_logo'
@@ -70,7 +76,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_logo_width', array(
-        'label' => __('Logo Width', 'login-customizer'),
+        'label' => __('Logo Width', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_logo_section',
         'priority' => 10,
         'settings' => 'logincust_logo_width'
@@ -83,7 +89,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_logo_height', array(
-        'label' => __('Logo Height', 'login-customizer'),
+        'label' => __('Logo Height', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_logo_section',
         'priority' => 15,
         'settings' => 'logincust_logo_height'
@@ -96,24 +102,24 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_logo_padding', array(
-        'label' => __('Padding Bottom', 'login-customizer'),
+        'label' => __('Padding Bottom', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_logo_section',
         'priority' => 20,
         'settings' => 'logincust_logo_padding'
     ));
-    
+
     $wp_customize->add_setting('logincust_bg_image', array(
         'type' => 'option',
         'capability' => 'edit_theme_options',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logincust_bg_image', array(
-        'label' => __('Background Image', 'login-customizer'),
+        'label' => __('Background Image', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_background_section',
         'priority' => 5,
         'settings' => 'logincust_bg_image'
     )));
-    
+
     $wp_customize->add_setting('logincust_bg_color', array(
         'default' => '#F1F1F1',
         'type' => 'option',
@@ -121,7 +127,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_bg_color', array(
-        'label' => __('Background Color', 'login-customizer'),
+        'label' => __('Background Color', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_background_section',
         'priority' => 10,
         'settings' => 'logincust_bg_color'
@@ -133,24 +139,24 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_bg_size', array(
-        'label' => __('Background Size', 'login-customizer'),
+        'label' => __('Background Size', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_background_section',
         'priority' => 15,
         'settings' => 'logincust_bg_size'
     ));
-    
+
     $wp_customize->add_setting('logincust_form_bg_image', array(
         'type' => 'option',
         'capability' => 'edit_theme_options',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logincust_form_bg_image', array(
-        'label' => __('Background Image', 'login-customizer'),
+        'label' => __('Background Image', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_form_bg_section',
         'priority' => 5,
         'settings' => 'logincust_form_bg_image'
     )));
-    
+
     $wp_customize->add_setting('logincust_form_bg_color', array(
         'default' => '#FFF',
         'type' => 'option',
@@ -158,12 +164,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_form_bg_color', array(
-        'label' => __('Background Color', 'login-customizer'),
+        'label' => __('Background Color', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_form_bg_section',
         'priority' => 10,
         'settings' => 'logincust_form_bg_color'
     )));
-    
+
     $wp_customize->add_setting('logincust_form_width', array(
         'default' => '320px',
         'type' => 'option',
@@ -171,7 +177,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_form_width', array(
-        'label' => __('Width', 'login-customizer'),
+        'label' => __('Width', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_form_section',
         'priority' => 15,
         'settings' => 'logincust_form_width'
@@ -184,12 +190,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_form_height', array(
-        'label' => __('Height', 'login-customizer'),
+        'label' => __('Height', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_form_section',
         'priority' => 20,
         'settings' => 'logincust_form_height'
     ));
-        
+
     $wp_customize->add_setting('logincust_form_padding', array(
         'default' => '26px 24px 46px',
         'type' => 'option',
@@ -197,7 +203,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_form_padding', array(
-        'label' => __('Padding', 'login-customizer'),
+        'label' => __('Padding', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_form_section',
         'priority' => 25,
         'settings' => 'logincust_form_padding'
@@ -209,12 +215,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_form_border', array(
-        'label' => __('Border (Example: 2px dotted black) ', 'login-customizer'),
+        'label' => __('Border (Example: 2px dotted black) ', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_form_section',
         'priority' => 30,
         'settings' => 'logincust_form_border'
     ));
-    
+
     $wp_customize->add_setting('logincust_field_width', array(
         'default' => '100%',
         'type' => 'option',
@@ -222,7 +228,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_field_width', array(
-        'label' => __('Input Field Width', 'login-customizer'),
+        'label' => __('Input Field Width', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_field_section',
         'priority' => 5,
         'settings' => 'logincust_field_width'
@@ -235,7 +241,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('logincust_field_margin', array(
-        'label' => __('Input Field Margin', 'login-customizer'),
+        'label' => __('Input Field Margin', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_field_section',
         'priority' => 10,
         'settings' => 'logincust_field_margin'
@@ -248,12 +254,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_field_bg', array(
-        'label' => __('Input Field Background', 'login-customizer'),
+        'label' => __('Input Field Background', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_field_section',
         'priority' => 15,
         'settings' => 'logincust_field_bg'
     )));
-    
+
     $wp_customize->add_setting('logincust_field_color', array(
         'default' => '#333',
         'type' => 'option',
@@ -261,7 +267,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_field_color', array(
-        'label' => __('Input Field Color', 'login-customizer'),
+        'label' => __('Input Field Color', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_field_section',
         'priority' => 20,
         'settings' => 'logincust_field_color'
@@ -274,12 +280,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_field_label', array(
-        'label' => __('Label Color', 'login-customizer'),
+        'label' => __('Label Color', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_field_section',
         'priority' => 25,
         'settings' => 'logincust_field_label'
     )));
-    
+
     $wp_customize->add_setting('logincust_button_bg', array(
         'default' => '#2EA2CC',
         'type' => 'option',
@@ -287,12 +293,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_button_bg', array(
-        'label' => __('Button Background', 'login-customizer'),
+        'label' => __('Button Background', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_button_section',
         'priority' => 5,
         'settings' => 'logincust_button_bg'
     )));
-    
+
     $wp_customize->add_setting('logincust_button_border', array(
         'default' => '#0074A2',
         'type' => 'option',
@@ -300,12 +306,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_button_border', array(
-        'label' => __('Button Border', 'login-customizer'),
+        'label' => __('Button Border', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_button_section',
         'priority' => 10,
         'settings' => 'logincust_button_border'
     )));
-    
+
     $wp_customize->add_setting('logincust_button_hover_bg', array(
         'default' => '#1E8CBE',
         'type' => 'option',
@@ -313,12 +319,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_button_hover_bg', array(
-        'label' => __('Button Background (Hover)', 'login-customizer'),
+        'label' => __('Button Background (Hover)', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_button_section',
         'priority' => 15,
         'settings' => 'logincust_button_hover_bg'
     )));
-    
+
     $wp_customize->add_setting('logincust_button_hover_border', array(
         'default' => '#0074A2',
         'type' => 'option',
@@ -326,12 +332,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_button_hover_border', array(
-        'label' => __('Button Border (Hover)', 'login-customizer'),
+        'label' => __('Button Border (Hover)', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_button_section',
         'priority' => 20,
         'settings' => 'logincust_button_hover_border'
     )));
-    
+
     $wp_customize->add_setting('logincust_button_shadow', array(
         'default' => '#78C8E6',
         'type' => 'option',
@@ -339,7 +345,7 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_button_shadow', array(
-        'label' => __('Button Box Shadow', 'login-customizer'),
+        'label' => __('Button Box Shadow', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_button_section',
         'priority' => 25,
         'settings' => 'logincust_button_shadow'
@@ -352,12 +358,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_button_color', array(
-        'label' => __('Button Color', 'login-customizer'),
+        'label' => __('Button Color', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_button_section',
         'priority' => 30,
         'settings' => 'logincust_button_color'
     )));
-    
+
     $wp_customize->add_setting('logincust_other_color', array(
         'default' => '#999',
         'type' => 'option',
@@ -365,12 +371,12 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_other_color', array(
-        'label' => __('Text Color', 'login-customizer'),
+        'label' => __('Text Color', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_other_section',
         'priority' => 5,
         'settings' => 'logincust_other_color'
     )));
-    
+
     $wp_customize->add_setting('logincust_other_color_hover', array(
         'default' => '#2EA2CC',
         'type' => 'option',
@@ -378,24 +384,124 @@ function logincust_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'logincust_other_color_hover', array(
-        'label' => __('Text Color (Hover)', 'login-customizer'),
+        'label' => __('Text Color (Hover)', LOGINCUST_TEXTDOMAIN),
         'section' => 'logincust_other_section',
         'priority' => 10,
         'settings' => 'logincust_other_color_hover'
     )));
-    
+
     $wp_customize->add_setting('logincust_other_css', array(
         'type' => 'option',
         'capability' => 'edit_theme_options',
     ));
 
     $wp_customize->add_control('logincust_other_css', array(
-        'label' => __('Custom CSS', 'login-customizer'),
+        'label' => __('Custom CSS', LOGINCUST_TEXTDOMAIN),
         'type' => 'textarea',
         'section' => 'logincust_other_section',
         'priority' => 15,
         'settings' => 'logincust_other_css'
     ));
+    if(!logincust_check_security()) {
+	    require_once LOGINCUST_FREE_PATH . '/includes/class-login-customizer-security-text-control.php';
+	    require_once LOGINCUST_FREE_PATH . '/includes/class-login-customizer-security-select-control.php';
+	    require_once LOGINCUST_FREE_PATH . '/includes/class-login-customizer-security-numeric-control.php';
+	    require_once LOGINCUST_FREE_PATH . '/includes/class-login-customizer-security-checkbox-control.php';
+	    require_once LOGINCUST_FREE_PATH . '/includes/class-login-customizer-security-badge-control.php';
+		$wp_customize->add_setting('logincust_pro_badge', array(
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		));
+		$wp_customize->add_control(new Logincust_Security_Badge_Control($wp_customize,
+			'logincust_pro_badge',
+			array(
+				'section'  => 'logincust_security_section',
+				'settings' => 'logincust_pro_badge',
+				'priority' =>1
+			)
+		));
+
+
+		$wp_customize->add_setting('logincust_security_captcha', array(
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		));
+		$wp_customize->add_control(new Logincust_Security_Checkbox_Disabled($wp_customize,'logincust_security_captcha', array(
+			'label' => __('Enable security captcha', LOGINCUST_TEXTDOMAIN),
+			'type' => 'checkbox',
+			'section' => 'logincust_security_section',
+			'priority' => 5,
+			'settings' => 'logincust_security_captcha'
+		)));
+
+		$wp_customize->add_setting('logincust_security_captcha_key', array(
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		));
+
+		$wp_customize->add_control(new Logincust_Security_Text_Control_Disabled($wp_customize,'logincust_security_captcha_key', array(
+			'label' => __('reCAPTCHA public key', LOGINCUST_TEXTDOMAIN),
+			'section' => 'logincust_security_section',
+			'priority' => 10,
+			'settings' => 'logincust_security_captcha_key'
+		)));
+
+
+		$wp_customize->add_setting('logincust_security_captcha_style', array(
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		));
+
+		$wp_customize->add_control(new Logincust_Security_Select_Control($wp_customize,'logincust_security_captcha_style', array(
+			'label' => __('reCAPTCHA style', LOGINCUST_TEXTDOMAIN),
+			'section' => 'logincust_security_section',
+			'priority' => 15,
+			'settings' => 'logincust_security_captcha_style'
+		), array('light','dark'), 'logincust_security_captcha_style'));
+
+
+		$wp_customize->add_setting('logincust_security_captcha_data_type', array(
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+		));
+
+		$wp_customize->add_control(new Logincust_Security_Select_Control($wp_customize,'logincust_security_captcha_data_type', array(
+			'label' => __('reCAPTCHA data type', LOGINCUST_TEXTDOMAIN),
+			'section' => 'logincust_security_section',
+			'priority' => 20,
+			'settings' => 'logincust_security_captcha_data_type'
+		), array('image','audio'), 'logincust_security_captcha_data_type'));
+
+
+		$wp_customize->add_setting( 'logincust_security_login_limits', array(
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+			'default' => 3
+		));
+
+		$wp_customize->add_control( new Logincust_Security_Number_Control_Disabled( $wp_customize,'logincust_security_login_limits', array(
+			'type' => 'text',
+			'description' => __('Set this 0 if you want unlimited attempts',LOGINCUST_TEXTDOMAIN),
+			'label' => __( 'Login limit attempts', LOGINCUST_TEXTDOMAIN ),
+			'section' => 'logincust_security_section',
+			'settings' => 'logincust_security_login_limits',
+			'priority' => 25
+		), '1' ) );
+
+		$wp_customize->add_setting( 'logincust_security_logins_timeout', array(
+			'type' => 'option',
+			'capability' => 'edit_theme_options',
+			'default' => 3
+		));
+
+		$wp_customize->add_control( new Logincust_Security_Number_Control_Disabled ( $wp_customize,'logincust_security_logins_timeout', array(
+			'type' => 'text',
+			'label' => __( 'Login timeout', LOGINCUST_TEXTDOMAIN ),
+			'section' => 'logincust_security_section',
+			'settings' => 'logincust_security_logins_timeout',
+			'priority' => 30
+		), '0.1' ) );
+    }
 }
 add_action('customize_register', 'logincust_customize_register');
 
@@ -543,7 +649,7 @@ function logincust_login_logo_url() {
     return get_bloginfo( 'url' );
 }
 add_filter( 'login_headerurl', 'logincust_login_logo_url' );
- 
+
 function logincust_login_logo_url_title() {
     $title = get_bloginfo( 'name', 'display' );
     return $title;
