@@ -5,10 +5,10 @@ Plugin URI: https://themeisle.com/plugins/login-customizer/
 Description: Custom Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! Awesome, right?
 Author: Hardeep Asrani
 Author URI:  https://themeisle.com/
-Version: 1.0.4
+Version: 1.0.5
 */
 
-define("LOGINCUST_VERSION","1.0.4");
+define("LOGINCUST_VERSION","1.0.5");
 define("LOGINCUST_FREE_PATH",plugin_dir_path( __FILE__ ));
 define("LOGINCUST_FREE_URL",plugin_dir_url( __FILE__ ));
 if ( !defined( 'LOGINCUST_TEXTDOMAIN' ) ) {
@@ -26,4 +26,4 @@ include( LOGINCUST_FREE_PATH . 'customizer.php');
 include( LOGINCUST_FREE_PATH . 'option-panel.php');
 include( LOGINCUST_FREE_PATH . 'includes/class-login-customizer-security-internal-pointer.php');
 
-$notification = new TAV_Remote_Notification_Client( 48, 'a8be784b898fa2fb', 'http://themeisle.com?post_type=notification' );
+$notification = new TAV_Remote_Notification_Client( 48, '0f7b61c2420ea7ec', 'http://themeisle.com?post_type=notification' );
